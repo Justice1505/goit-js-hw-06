@@ -4,12 +4,12 @@ inputElement.addEventListener("blur", onInputValidation);
 
 function onInputValidation(ev) {
   const valueLength = ev.currentTarget.value.length;
-  const requiredLength = inputElement.dataset.length;
+  const requiredLength = Number(inputElement.dataset.length);
 
   this.classList.add("invalid");
   this.classList.remove("valid");
 
-  if (valueLength == requiredLength) {
+  if (valueLength === requiredLength) {
     this.classList.add("valid");
     this.classList.remove("invalid");
   }

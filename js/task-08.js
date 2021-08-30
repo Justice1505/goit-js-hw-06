@@ -18,7 +18,7 @@ function onFormSubmit(e) {
 
   const formData = new FormData(e.currentTarget);
 
-  formData.forEach((b, c) => (form1[c] = b));
+  formData.forEach((a, b) => (form1[b] = a));
 
   forms.form.reset();
 
