@@ -14,11 +14,13 @@ const images = [
 ];
 
 const galleryEl = document.querySelector(".gallery");
-
 const imagesArray = images.map(({ url, alt }) => {
-  return `<li class="item item-img"><img class="image" width= "500" height= "300" src="${url}" alt="${alt}"></li>`;
+  return `<li class="item item-img"><img class="image" width= "450" height= "300" src="${url}" alt="${alt}"></li>`;
 });
-
 imagesArray.forEach((element) => {
   galleryEl.insertAdjacentHTML("beforeEnd", element);
 });
+
+galleryEl.style.listStyle = "none";
+galleryEl.style.display = "flex";
+galleryEl.style.justifyContent = "space-between";
